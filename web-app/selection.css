@@ -1,0 +1,24 @@
+div {
+    background: white;
+  }
+  .red {
+    background: red;
+  }
+  .red.green {
+    background: green;
+  }
+
+ .center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+ul li {
+	width: 14em
+}
+
+#border{
+	border: none;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Selection Demo</title>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="selection.css">
+</head>
+<body>
+<div class = "center" id = "border">
+<p>Here is a list of actions you can perform. addClass() add red class to songs that were green. Cloest() finds the cloest song to where you clicked and change its color to purple. :lt() selector selects the first 4 songs and hide them. .on() allows you to bind multiple events to one selector as you can see from the actions on show button.</p>
+  <ol>
+    <li>Click the hide button to hide the first 4 songs from the list</li>
+    <li>Click the show button to change red songs to green ones</li>
+    <li>Mouse over the show button to see fadein and fadeout</li>
+    <li>Click any song to change font color to purple</li>
+  </ol>
+</div>
+<div class = "center">
+  <ul>
+    <li>Your Star</li>
+    <li>Swing, Swing</li>
+    <li class = "red">Time Stands Still</li>
+    <li>One More Sad Song</li>
+    <li>Why Worry</li>
+    <li>Don't Leave Me</li>
+    <li>Too Far Gone</li>
+    <li>Drive Away</li>
+    <li class = "red">Happy Endings</li>
+    <li>Crown Of Love</li>
+    <li>In The Backseat</li>
+    <li>Myth</li>
+    <li class = "red">Lazuli</li>
+    <li>Evaporated</li>
+    <li>Touch It / Technologic</li>
+  </ul>
+  <p class = "text"> There is no green li </p>
+
+
+  <button type="button" id="hide">Hide</button>
+  <button type="button" id="show">Show</button>
+ <div>
+<script src="selection.js"></script>
+</body>
+</html>
