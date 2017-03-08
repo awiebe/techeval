@@ -10,16 +10,26 @@ article {
   margin: 1em auto;
 }
 
+ul { /* remove bullets from selection list */
+  list-style-type: none;
+}
+ul a{
+  text-decoration: none;
+}
+
 .table-of-contents {
   float: right;
   width: 40%;
   background: #eee;
   font-size: 0.8em;
   padding: 1em 2em;
-  margin: 0 0 0.5em 0.5em;
+  margin: 0 0 0.5em 0em;
 }
+
 .table-of-contents ul {
   padding: 0;
+  list-style-type: none;
+
 }
 .table-of-contents li {
   margin: 0 0 0.25em 0;
@@ -39,4 +49,20 @@ h3:target {
 @keyframes highlight {
   from { background: yellow; }
   to { background: white; }
+}
+
+#jquery_title{
+  text-align: center;
+  font-size: 2.5em;
+  color: #BF5FFF;
+}
+
+#groupname{
+  text-align: center;
+  font-size: 2.2em;
+}
+
+#team{
+  text-align: center;
+  font-size: 1.2em;
 }
