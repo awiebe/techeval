@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<!-- Start of first page: #one -->
+<div data-role="page" id="one" data-theme="b">
+
+	<div data-role="header">
+		<h1>So, what exactly is jQuery mobile?</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<!-- popups -->
+		<div data-role="popup" id="popupBasic">
+			<p>
+				too easy!
+			</p>
+		</div>
+<div data-role="popup" id="dialog1" data-theme="b" data-dismissible="false">
+
+    <div role="main" class="ui-content">
+        <h3> You can also make dialog boxes! </h3>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Exit me!</a>
+    </div>
+</div><!-- /popups -->
+
+		<h2>Well,</h2>
+		<p>
+		Designing our music apps, it has become obvious that it's extremely
+		tedious to hide certain elements and display others in an interactive way
+		(when a user clicks a certain element on the page, like selecting a playlist).
+		JQuery mobile is a framework that provides a set of tools to easily create applications
+		like our Music Apps all within a single <code>.html</code> document.
+		</p>
+		<p>
+			It does so by giving certain elements a <code>data-role</code> element, which
+			defines what kind of element it is. This content is wrapped in a <code>div</code>
+			with a <code>data-role="page"</code> tag and an <code>id</code> specifying what page
+			it will be. This is obviously page 1!
+		</p>
+
+		<p><a href="#two" class="ui-btn ui-shadow ui-corner-all" data-transition="flip">Let's see a different page!</a></p>
+
+		<p> Note that when you click the above button, a 'flipping' animation is performed. If
+			you click the back button in the browser from that other page, you will see it reverses
+			back (which is different than from hitting the 'back' button within the second page,
+			where it instead flashes away).
+		</p>
+<hr />
+		<p> It's also possible to create
+<a href="#dialog1" data-rel="popup" data-position-to="window" data-transition="slide">modal boxes</a>
+		or even <a href="#popupBasic" data-rel="popup" data-transition="pop">inline popups</a>
+which allows for fun and interactive possibilities for all web applications.
+
+		</p>
+
+<p> There's also a large number of widgets you can include into your websites.
+	For example, maybe you want to let users select their current area they're in
+	when they're registering.
+
+	This can easily be included:
+</p>
+	<div class="ui-field-contain">
+    <select name="select-custom-1" id="select-custom-1" data-native-menu="false">
+        <option value="1">Vancouver</option>
+        <option value="2">Calgary</option>
+        <option value="3">Victoria</option>
+        <option value="4">Edmonton</option>
+    </select>
+</div>
+<p> Maybe during a login form, you'd provide an option for the server to remember
+	you during a login (keeping your session active).
+</p>
+<form>
+    <label style="width: 170px;">
+        <input type="checkbox" name="checkbox-0" >Remember me?
+    </label>
+</form>
+
+<p>
+	All of these options available in jQuery mobile allow you to make awesome
+	web applications with clean visuals. They are all optimized for mobile device
+	such as smartphones and tablets, but also look great on Desktop browsers.
+</p>
+	</div><!-- /content -->
+
+
+</div><!-- /page one -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Another page!</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Cool, right?</h2>
+		<p> The colours of the elements on these two pages have been swapped easily using
+			the <code>data-theme</code> element of the page div. Themes can easily be created
+			by using the 'themeroller' at <a href="https://themeroller.jquerymobile.com/">this website</a>.
+		</p>
+		<p><a href="#one" data-direction="reverse" data-transition="pop" class="ui-btn ui-shadow ui-corner-all">Back to Page One</a></p>
+
+	</div><!-- /content -->
+
+
+
+</div><!-- /page two -->
+
+
+
+
+
+	</body>
+
+</body>
+</html>
