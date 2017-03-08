@@ -1,20 +1,31 @@
-var n = 1
+var interval = 4
 var count = 0
+
 $("#hide").click(function() {
+  var gcount = 0
+  $("ol.demo li:lt(" + interval + ")").hide().addClass("gone")
+  $("ol.demo li").each(function() {
 
-  $("ul li:lt(" + n + ")").hide()
+    el = $(this);
+    if (el.hasClass('green') && !el.hasClass('gone')){ 
+      gcount++
 
-  n += 4
+      $( "p.text" ).text( "There is "+ gcount +" green li" );
+  }  
+  if (gcount === 0 ){$( "p.text" ).text( "There is no green li" );}
+})
+
+  interval += 4
 });
 
 $( document ).on( "click", function( event ) {
-  $( event.target ).closest( "li" ).css( "color","purple" );
+  $( event.target ).closest( "ol.demo li" ).css( "color","purple" );
 });
 
-$( "#show" ).on({
+$( "#changeColor" ).on({
     click: function() {
      
-      $( "ul li" ).addClass(function( index, currentClass ) {
+      $( "ol.demo li" ).addClass(function( index, currentClass ) {
         var addedClass;
 
         if ( currentClass === "red" ) {
