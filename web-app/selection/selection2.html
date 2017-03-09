@@ -8,7 +8,11 @@
       <script type = "text/javascript" language = "javascript">
          $(document).ready(function() {
             $("img").click(function () {
-               $(this).clone().insertAfter(this);
+              if($(".mario").index(this) === 0 || $(".luigi").index(this) === 0  || $(".princess").index(this) === 0){
+                $(this).clone(true).insertAfter(this);
+
+              } else {$(this).remove();}
+
             });
          });
       </script>
@@ -18,11 +22,11 @@
    <body style="background: #eee; padding: 20px;">
         <div style="max-width: 50em; background: white; padding: 2em; margin: 1em auto;">
 
-              <p>.clone() creates a deep copy of the set of matched elements. The downside of .clone() is that it produces elements with duplicate id attributes, which are supposed to be unique. Click on any image below to see the result:</p>
+              <p>.clone() creates a deep copy of the set of matched elements. The downside of .clone() is that it produces elements with duplicate id attributes, which are supposed to be unique. Click the first image on each row to make clones; click any clone to remove clones:</p>
                 
-              <div><img id="mario" src="mario.png" alt="Mario" width="80" height="100"></div>
-              <div><img id="luigi" src="luigi.png" alt="Luigi" width="80" height="100"></div>
-              <div><img id="princess" src="princess.png" alt="Princess" width="80" height="100"></div>
+              <div><img class="mario" src="mario.png" alt="Mario" width="80" height="100"></div>
+              <div><img class="luigi" src="luigi.png" alt="Luigi" width="80" height="100"></div>
+              <div><img class="princess" src="princess.png" alt="Princess" width="80" height="100"></div>
         </div>
         
    </body>
