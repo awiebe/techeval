@@ -103,3 +103,13 @@ em{
 {
 	list-style-type: none;
 }
+
+.codesnippet
+{
+	border:grey outset 1px;
+}
+
+.codesnippet, .codesnippet pre, .codesnippet pre code
+{
+background-color: ivory;
+}

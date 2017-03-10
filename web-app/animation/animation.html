@@ -4,8 +4,20 @@
     	<title>Animation Demo</title>
         <link rel='stylesheet' type='text/css' href='animation.css'/>
         <link rel='stylesheet' type='text/css' href='../style.css'/>
+        
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+		
+		<!--code highlighting -->
+		<link rel="stylesheet" href="../lib/highlight/styles/default.css">
+		<script src="../lib/highlight/highlight.pack.js"></script>
+		<script>$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});</script>
+		
+
 		<script type='text/javascript' src='animation.js'></script>
 	</head>
 	<body>
@@ -20,6 +32,59 @@
    <div>
    
         <img src= "animation_img.png">
+    
+    
+    
+    </div>
+    <div class="codesnippet">
+    
+    <pre>
+    <code >
+    $(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+
+			// Up Arrow Pressed
+			case 38:
+				$('img').animate({top: "-=10px"}, 'fast');				
+				break;
+
+
+			// Down Arrow Pressed
+			case 40:
+				$('img').animate({top: "+=10px"}, 'fast');
+				break;
+
+
+			// Right Arrow Pressed
+			case 39:
+				$('img').animate({left: "+=10px"}, 'fast');
+				break;
+			
+			// Left arrow key pressed
+			case 37:
+				$('img').animate({left: "-=10px"}, 'fast');
+				break;
+			
+		}
+	});
+
+    $('img').mouseleave(function(){
+        $('img').effect('bounce', {times:3}, 500);
+    });
+
+	$('img').click(function(){
+        $("img").fadeOut(500);
+        $("img").fadeIn(500);
+
+        
+    });
+
+    
+
+});
+    </code>
+    <pre>
     </div>
     
 	<div id="bottom_nav">
