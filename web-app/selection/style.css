@@ -1,0 +1,83 @@
+body {
+  background: #eee;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+article {
+  max-width: 50em;
+  background: white;
+  padding: 2em;
+  margin: 1em auto;
+}
+
+#TOC { /* remove bullets from selection list */
+  list-style-type: none;
+  padding: 0 0 0 0; /* nicely align the TOC with on this page box */
+}
+#TOC a{
+  text-decoration: none;
+}
+
+
+
+.table-of-contents {
+  float: right;
+  width: 35%;
+  background: #eee;
+  font-size: 0.8em;
+  padding-left: 1em;
+  margin-left: 10%;
+  border: 3px solid #eee;
+  border-radius: 10px;
+
+}
+
+.table-of-contents ul {
+  padding: 0;
+  list-style-type: none;
+
+}
+.table-of-contents li {
+  margin: 0 0 1.7em 0;
+}
+.table-of-contents a {
+  text-decoration: none;
+}
+.table-of-contents a:hover,
+.table-of-contents a:active {
+  text-decoration: underline;
+}
+
+h3:target {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  from { background: yellow; }
+  to { background: white; }
+}
+
+#jquery_title{
+  text-align: center;
+  font-size: 2.5em;
+  color: #BF5FFF;
+}
+
+#groupname{
+  text-align: center;
+  font-size: 2.2em;
+}
+
+#team{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.liHovered {
+  color: green;
+}
+
+.liHovered2{
+  color: rebeccapurple;
+}
