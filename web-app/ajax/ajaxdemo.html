@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="ajax.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel='stylesheet' type='text/css' href='../style.css'/>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ajax</title>
+		
+		    <!-- code colorization -->
+        <link rel="stylesheet" href="../lib/highlight/styles/dracula.css">
+		<script src="../lib/highlight/highlight.pack.js"></script>
+		<script>
+		$(document).ready(function() {
+			$.get("ajaxdemo.html", function(data, status){
+				$('pre code').each(function(i, block) {
+				block.textContent= data;
+				});
+				$('pre code').each(function(i, block) {
+						hljs.highlightBlock(block);
+				});
+			});
+		});
+		</script>
+
+
 	</head>
-	<body style="background: #eee; padding: 20px;">
-		<article style="max-width: 50em; background: white; padding: 2em; margin: 1em auto;">
+	<body >
+		<article >
 			<h1>Ajax Demo</h1>
 			<div class="all-questions">
                 <p>The example shown below utilizes JSONPlaceholder to show ajax requests<p>
@@ -17,14 +38,26 @@
                 <button id="ajax-requestButton">Ajax Request</button>
 			</div>
 			</div>
+			
+			<div>
+				<p> 
+				We can also use AJAX to have this page describe itself, notice how jQuery is used to colorize the code in this block.
+				Be honest, that's pretty mind blowingly meta.
+				</p>
+				<div class="codesnippet">
+
+					  <!-- Escaped code so tags aren't interprsted as html --> 
+					<pre><code class="html"></code></pre>
+				</div>
+      </div>
+			
 	<div id="bottom_nav">
 	<hr>
 	<a href="index.html">Up:Index</a>
 	<a href="selection1.html">Next:Selection Demo</a>
 	</div>
 		</article>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="ajax.js"></script>
+
 		
 	</body>
 </html>

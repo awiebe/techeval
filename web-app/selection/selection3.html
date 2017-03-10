@@ -10,17 +10,7 @@
     <!-- code colorization -->
         <link rel="stylesheet" href="../lib/highlight/styles/default.css">
 		<script src="../lib/highlight/highlight.pack.js"></script>
-		<script>$(document).ready(function() {
 		
-		$.get("index.js", function(data, status){
-        $('pre code').each(function(i, block) {
-    	block.textContent= data;
-    	});
-        $('pre code').each(function(i, block) {
-    	hljs.highlightBlock(block);
-  });
-    });
-});</script>
 <!-- -->
     
     <link rel="stylesheet" href="style.css">
@@ -36,6 +26,7 @@
       <div class="all-questions">
 
       </div>
+      
       <p>jQuery's fancy DOM manipulation can help us build a dynamically generated table of contents as the user upload their input, as shown on the right of the page.</p>
       <ul id="TOC">
           <li>
@@ -78,47 +69,13 @@
       
       
       
-      </div>
-      
       <div class="codesnippet">
-      
-          <!-- Escaped code so tags aren't interprsted as html --> 
-      <pre>
-      <code class="javascript"><!-- 
-var ToC =&quot;&lt;nav role='navigation' class='table-of-contents'&gt;&quot; +&quot;&lt;h2&gt;On this page:&lt;/h2&gt;&quot; +&quot;&lt;ul&gt;&quot;;
-
-var newLine, el, title, link;
-
-$(&quot;article h3&quot;).each(function() {
-
-el = $(this);
-title = el.text();
-link = &quot;#&quot; + el.attr(&quot;id&quot;);
-
-newLine =&quot;&lt;li&gt;&quot; +&quot;&lt;a href='&quot; + link + &quot;'&gt;&quot; +title +&quot;&lt;/a&gt;&quot; +&quot;&lt;/li&gt;&quot;;
-
-ToC += newLine;
-
-});
-
-ToC +=&quot;&lt;/ul&gt;&quot; +&quot;&lt;/nav&gt;&quot;;
-
-$(&quot;.all-questions&quot;).prepend(ToC);
-
-$(&quot;h3, h3 a&quot;).hover(function() { // hover on table of contents links
-$(this).addClass(&quot;liHovered&quot;);
-}, function() {
-$(this).removeClass(&quot;liHovered&quot;); // when not hovered
-});
-
-$(&quot;.all-questions li a&quot;).hover(function() { // hover on table of contents links
-$(this).addClass(&quot;liHovered2&quot;);
-}, function() {
-$(this).removeClass(&quot;liHovered2&quot;); // when not hovered
-});	 
- -->
-</code>
-      </pre>
+	  
+			  <!-- Escaped code so tags aren't interprsted as html --> 
+		  <pre>
+		  <code class="javascript">
+		  </code>
+		  </pre>
       </div>
       
       
@@ -129,6 +86,18 @@ $(this).removeClass(&quot;liHovered2&quot;); // when not hovered
 		</div>
     
     </article>
-    <script src="index.js"></script>
+<!--     <script src="index.js"></script> -->
+    <script>
+
+		$.get("index.js", function(data, status)
+		{
+			//Populate the code box and rn the page javascript at the same time
+			//It seems to eb impossoble to set the text without making the javascript execute
+			$('pre code').text(data);
+			$('pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
+		});
+	</script>
   </body>
 </html>

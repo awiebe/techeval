@@ -104,14 +104,8 @@ em{
 	list-style-type: none;
 }
 
-.codesnippet
+.codesnippet code
 {
+	padding:1em;
 	border:grey outset 1px;
-}
-
-.codesnippet, .codesnippet pre, .codesnippet pre code
-{
-background-color: ivory;
-margin:0px;
-padding:1px;
 }

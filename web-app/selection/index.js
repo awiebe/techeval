@@ -1,3 +1,5 @@
+
+
 var ToC =
   "<nav role='navigation' class='table-of-contents'>" +
     "<h2>On this page:</h2>" +
@@ -39,3 +41,9 @@ $(".all-questions li a").hover(function(){ // hover on table of contents links
 }, function(){
   $(this).removeClass("liHovered2"); // when not hovered
 });
+
+
+
+		
+
+
