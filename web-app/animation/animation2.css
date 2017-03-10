@@ -1,0 +1,38 @@
+body{
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  display: inline-block;
+
+}
+
+#slider {
+  width: 600px;
+  height: 400px;
+  margin: 0;
+  overflow: hidden;
+}
+
+#slider .slides {
+  display: inline-block;
+  width: 4000px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  width: 600px;
+  height: 400px;
+}
+
+img {
+  width:600px;
+  height: 400px;
+
+}

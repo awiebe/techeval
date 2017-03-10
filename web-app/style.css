@@ -1,5 +1,5 @@
 body {
-  background: #eee;
+  background: #eee !important;
   padding: 20px;
   font-family: 'Roboto', sans-serif;
 }
@@ -24,7 +24,6 @@ article {
 .table-of-contents {
   float: right;
   width: 35%;
-  background: #eee;
   font-size: 0.8em;
   padding-left: 1em;
   margin-left: 10%;
@@ -55,13 +54,13 @@ h3:target {
 
 @keyframes highlight {
   from { background: yellow; }
-  to { background: white; }
+  to { background: darkcyan; }
 }
 
 #jquery_title{
   text-align: center;
-  font-size: 2.5em;
-  color: #BF5FFF;
+  font-size: 4.5em;
+  color: darkcyan;
 }
 
 #groupname{
@@ -75,9 +74,27 @@ h3:target {
 }
 
 .liHovered {
-  color: green;
+  color: darkcyan;
 }
 
 .liHovered2{
-  color: rebeccapurple;
+  color: darkcyan;
+}
+.jumbotron{
+  padding: 50px;
+}
+nav {
+  padding: 20px;
+}
+.smaller {
+  border-left: 5px darkcyan solid;
+  padding: 20px;
+  font-size: 1.2em !important;
+}
+.f-right{
+  float:right;
+  margin: 0 20px;
+}
+em{
+  color: darkcyan;
 }
