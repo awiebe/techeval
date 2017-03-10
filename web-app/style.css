@@ -112,4 +112,6 @@ em{
 .codesnippet, .codesnippet pre, .codesnippet pre code
 {
 background-color: ivory;
+margin:0px;
+padding:1px;
 }
