@@ -1,54 +1,38 @@
 <html>
+	 <head>
+		<title>Selection Demo 2</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type = "text/javascript" language = "javascript">
+				$(document).ready(function() {
+					$("img").click(function () {
+						if($(".mario").index(this) === 0 || $(".luigi").index(this) === 0  || $(".princess").index(this) === 0){
+							$(this).clone(true).insertAfter(this);
 
-   <head>
-      <title>Selection Demo 2</title>
-      <script type = "text/javascript" 
-         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        
-      <script type = "text/javascript" language = "javascript">
-         $(document).ready(function() {
-            $("img").click(function () {
-              if($(".mario").index(this) === 0 || $(".luigi").index(this) === 0  || $(".princess").index(this) === 0){
-                $(this).clone(true).insertAfter(this);
+						} else {$(this).remove();}
 
-              } else {$(this).remove();}
-
-            });
-         });
-      </script>
-      <link rel='stylesheet' type='text/css' href='../style.css'/>
-      <link rel="stylesheet" href="style.css">
-        
-     </head>
-    
-   <body>
-   
-   <article>
-   <div class = "center" id = "border">
-        <div>
-
-              <p>.clone() creates a deep copy of the set of matched elements.
-               The downside of .clone() is that it produces elements with duplicate id attributes, which are supposed to be unique.
-                Click on the first image on each row to make clones; click on any clone to remove it:
-              </p>
-                
-              <div><img class="mario" src="img/mario.png" alt="Mario" width="80" height="100"></div>
-              <div><img class="luigi" src="img/luigi.png" alt="Luigi" width="80" height="100"></div>
-              <div><img class="princess" src="img/princess.png" alt="Princess" width="80" height="100"></div>
-        </div>
-     
-     
-		<div id="bottom_nav">
-		<hr>
-		<ul>
-		<li><a href="index.html">Up:Index</a></li>
-		<li><a href="selection3.html">Next:Selection Demo 3: Dynamic Table</a></li>
-		</ul>
-		</div>   
-    </div>
-    </article>
-	
-        
-   </body>
-    
+					});
+				});
+		</script>
+		<link rel="stylesheet" type="text/css" href="../style.css"/>
+		<link rel="stylesheet" href="style.css">	
+	</head>
+	<body>
+		<article>
+			<div class="center" id="border">
+				<div>
+					<p>.clone() creates a deep copy of the set of matched elements. The downside of .clone() is that it produces elements with duplicate id attributes, which are supposed to be unique. Click on the first image on each row to make clones; click on any clone to remove it:</p>
+					<div><img class="mario" src="img/mario.png" alt="Mario" width="80" height="100"></div>
+					<div><img class="luigi" src="img/luigi.png" alt="Luigi" width="80" height="100"></div>
+					<div><img class="princess" src="img/princess.png" alt="Princess" width="80" height="100"></div>
+				</div>
+				<div id="bottom_nav">
+					<hr />
+					<ul>
+						<li><a href="index.html">Up:Index</a></li>
+						<li><a href="selection3.html">Next:Selection Demo 3: Dynamic Table</a></li>
+					</ul>
+				</div>   
+			</div>
+		</article>		
+	 </body>
 </html>
