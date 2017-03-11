@@ -6,14 +6,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ajax</title>
+		<link rel="stylesheet" type="text/css"  href="../style.css">
+		<link rel="stylesheet" type="text/css"  href="style.css">
+		
 	</head>
-	<body style="background: #eee; padding: 20px;">
-		<article style="max-width: 50em; background: white; padding: 2em; margin: 1em auto;">
+	<body >
+		<article >
 			<h1>Ajax</h1>
+			<p> AJAX allows web applications to interact with the server, without loading a new page.
+			Historically AJAX was one of the core features of jQuery, because browser vendors had not
+			yet decided on the same API.  Ajax can be invoked using jQuery in a variety of ways, notably:
+			</p>
+			
+			<div>
+			<code> $("selector").load("path");</code> Which replaces the inner html of the target elements with the loaded data.
+			</div>
+			and
+			<div>
+			<code> $.get("path",&lt;handler&gt;)</code> Which allows custo handling of response text.
+			</div>
+			
 			<div class="all-questions">
 				<ul>
-					<li><h3><a href="about.html">About</a></h3></li>
-					<li><h3><a href="ajaxdemo.html">Ajax Demo1</a></h3></li>
+					<li><h3><a href="ajaxdemo.html">Ajax Demo 1</a></h3></li>
 				</ul>
 			</div>
 			</div>
