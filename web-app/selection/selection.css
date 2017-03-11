@@ -2,16 +2,14 @@ div {
     background: white;
   }
   .red {
-    background: red;
+    background: lightcoral;
   }
   .red.green {
-    background: green;
+    background: lightseagreen;
   }
 
  .center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
+    border: 3px solid darkcyan;
     padding: 10px;
 }
 

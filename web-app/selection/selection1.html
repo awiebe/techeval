@@ -5,13 +5,16 @@
 		<title>Selection Demo</title>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="selection.css" />
-		<link rel="stylesheet" href="style.css" />
+		<!--<link rel="stylesheet" href="style.css" />-->
 		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/bootswatch.css">
 	</head>
 	<body>
 		<article>
 			<div class="center" id="border">
-				<p>Here is a list of actions you can perform. addClass() add green class to songs that were red. Cloest() finds the cloest song to where you clicked and change its color to purple. :lt() selector selects the first 4 songs and hide them. .on() allows you to bind multiple events to one selector as you can see from the actions on Change Color button.</p>
+				<h1>Action List </h1>
+				<p>Here is a list of actions you can perform. <em>addClass()</em> add green class to songs that were red. <em>Cloest()</em> finds the cloest song to where you clicked and change its color to purple. <em>:lt()</em> selector selects the first 4 songs and hide them. <em>.on()</em> allows you to bind multiple events to one selector as you can see from the actions on Change Color button.</p>
 				<ol>
 					<li>Click on the Hide button to hide the first 4 songs from the list</li>
 					<li>Click on the Change Color button to change red songs to green ones</li>
@@ -41,14 +44,14 @@
 				<p class="text"> There is no green li</p>
 				<button type="button" id="hide">Hide</button>
 				<button type="button" id="changeColor">Change Color</button>
-				<div id="bottom_nav">
-					<hr />
-					<ul>
-						<li><a href="index.html">Up:Index</a></li>
-						<li><a href="selection2.html">Next:Selection Demo 2: Cloning</a></li>
-					</ul>
-				</div>
+
 			</div>
+			<hr>
+			<ul class="breadcrumb">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="index.html">Selection</a></li>
+				<li class="active">Action List</li>
+			</ul>	
 		</article>
 		<script src="selection.js"></script>
 	</body>
