@@ -4,6 +4,8 @@
 		<title>Animation Demo2</title>
 		<link rel='stylesheet' type='text/css' href='animation2.css'/>
 		<link rel='stylesheet' type='text/css' href='../style.css'/>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/bootswatch.css">
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 		<script type='text/javascript' src='animation2.js'></script>
@@ -11,6 +13,7 @@
 	<body>
 		<div>
 			<div>
+				<h1>Carousel</h1>
 				<p>Animation Demo 2 Description: With animate() and setTimeout() functions, we can easily create an automatic image slider. Every 2 seconds, animate() function moves the image to the left. After we see the last slide, it goes back to the first slide and continues.</p>
 			</div>
 			<div class="container"> 
@@ -23,10 +26,12 @@
 					</ul>
 				</div>
 			</div>
-			<div id="bottom_nav">
-				<hr />
-				<a href="index.html">Up: Home</a>
-			</div>
+		<hr>
+		<ul class="breadcrumb">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="index.html">Animation</a></li>
+			<li class="active">Carousel</li>
+		</ul>
 		</div>
 	</body>
 </html>
